@@ -10,6 +10,6 @@
   },
   "scripts": {
     "build": "webpack",
-    "serve": "webpack serve"
+    "watch": "webpack --watch"
   }
 }

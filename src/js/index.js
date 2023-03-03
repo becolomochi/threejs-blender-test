@@ -1,3 +1,20 @@
+import { Scene } from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const scene = new Scene();
+scene.background = new THREE.Color( 0x87B8C0 ); // 背景色
+
+camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
+camera.position.set(0, 400, -1000);
+
+const controls = new OrbitControls( camera, renderer.domElement );
+const loader = new GLTFLoader();
+const url = '3d/notitle.glb';
+
+
+
+
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
@@ -15,18 +32,18 @@ function init() {
     console.log(width + ", " + height);
 
     // シーンを作成
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0x87B8C0 ); // 背景色
+    // const scene = new THREE.Scene();
+    // scene.background = new THREE.Color( 0x87B8C0 ); // 背景色
 
     // カメラを作成
-    camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
-    camera.position.set(0, 400, -1000);
+    // camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
+    // camera.position.set(0, 400, -1000);
 
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    // const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
     // Load GLTF or GLB
-    const loader = new THREE.GLTFLoader();
-    const url = '3d/notitle.glb';
+    // const loader = new THREE.GLTFLoader();
+    // const url = '3d/notitle.glb';
 
     // window size
     const w_height = window.innerHeight;
